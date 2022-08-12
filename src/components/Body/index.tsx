@@ -1,22 +1,18 @@
-import { Flex, Img } from "@chakra-ui/react";
-
+import { Button, Flex, Text } from "@chakra-ui/react"
+import Image from "next/image"
+import desktop from "../../../public/desktop.png"
 export default function GerandoResultados() {
     return (
-        <Flex border="1px solid red">
-            <Img w="300px" h="100px" src="./public/desktop.png" />
-        </Flex>
+        <Flex alignItems="center">
+            <Image src={desktop} />
+            <Flex direction="column" justifyContent="center" marginLeft="300px" w="700px" position="absolute">
+                <Text fontSize="60px" fontWeight="bold" fontFamily="sans-serif">Gerando resultados</Text>
+                Agencia Full-Service para quem sonha em ter um negocio
+                <Flex marginTop="60px">
+                    <Button shadow={"lg"} w="170px" color="white" bg="#00DEB6">Fale Conosco</Button>
+                </Flex>
+            </Flex>
+        </Flex >
     )
 }
 
-
-
-// import { Box, Flex } from “@chakra-ui/react”;
-// import Image from ‘next/image’;
-// import desktop from “./body/desktop.png”;
-// export default function GerandoResultados() {
-//     return (
-//         <Box boxSize=“200px” > // ou size=200px
-//             <Image src={desktop} alt=“Desktop” />
-//         </Box>
-//     )
-// }
